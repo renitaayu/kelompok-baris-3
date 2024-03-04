@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tkj.css">
+    <title>SMK Bintang Harapan</title>
+</head>
+<body>
+<section class="head">
+    <div class="satu">
+        <a href="https://www.instagram.com/smkbintangharapan_/"><img src="media/LogoSMKBInhar.png" alt=""></a>
+        <h1>SMK BINTANG HARAPAN</h1>
+    </div>
+    <div class="dua">
+        <ul>
+            <li class="navbar" onclick="navbarDiKlik()" id="menuNavBar"><img src="media/menuNavBar.svg" alt=""></li>
+            <li><a href="index.html#beranda">beranda</a></li>
+            <li><a href="index.html#tentangKami">Tentang Kami</a></li>
+            <li><a href="index.html#acara">EsktraKurikuler</a></li>
+            <li><a href="index.html#galeri">Galeri</a></li>
+            <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="navbar-container" id="navbarContainerMuncul">
+    <ul>
+        <li><a href="index.html#beranda">beranda</a></li>
+        <li><a href="index.html#tentangKami">Tentang Kami</a></li>
+        <li><a href="index.html#acara">EsktraKurikuler</a></li>
+        <li><a href="index.html#galeri">Galeri</a></li>
+        <li><a href="index.html#kontak">Kontak</a></li>
+    </ul>
+    <div class="container1" onclick="navbarDiKlik()"><img class="navbar" id="silang" src="media/silang.svg"></div>
+</section>
+
+<script>
+    let navbarContainerMuncul = document.getElementById("navbarContainerMuncul");
+    let silang = document.getElementById("silang");
+    let menuNavBar = document.getElementById("menuNavBar");
+    let i = 0;
+    function navbarDiKlik() {
+        console.log ("di klik");
+        i++;
+        if (i == 1) {
+            navbarContainerMuncul.style.display = "flex";
+            menuNavBar.style.display = "none";
+        } if (i == 2) {
+            navbarContainerMuncul.style.display = "none";
+            menuNavBar.style.display = "block";
+            i = 0;
+        }
+    }
+    let timerId = setInterval(() => screenTime(), 500);
+    function screenTime() {
+        let screenChange = screen.width;
+        if (menuNavBar.style.display == "none") {} else {
+            if (screenChange > 1320) {
+            menuNavBar.style.display = "none";
+            navbarContainerMuncul.style.display = "none";
+            console.log ("di klik");
+        }
+        }
+        if (menuNavBar.style.display == "block") {} else {
+            if (screenChange < 1320) {
+            menuNavBar.style.display = "block";
+            console.log ("di klik");
+        }
+        }
+    }
+
+</script>
+
+<section class="halaman">
+    <section class="isihalaman">
+        <div class="textHead">FARMASI</div>
+        <div class="content">
+            <img class="gambar" src="media/farmasi.jpg">
+            <div class="textInfo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta atque optio suscipit omnis illum animi fugit beatae sunt? Quod nulla perferendis cum itaque rerum nobis a culpa expedita voluptate animi, iusto delectus voluptatem doloremque at debitis in, optio quidem alias quaerat numquam officia? Assumenda quo consequuntur, delectus, illum inventore pariatur laudantium repellat eum sed ducimus minus deserunt ad voluptas explicabo? Labore unde corrupti odio? Fuga, placeat eos architecto iusto nam consequatur vel cupiditate optio ratione minus. Aliquid molestiae tempore saepe quas perspiciatis eum doloremque nesciunt reiciendis dicta repellat modi assumenda voluptate commodi accusamus tempora sapiente, quibusdam harum totam rem!
+            </div>
+        </div>
+        <div class="peserta">
+            <div class="card">
+                jumlah peserta <br> <h1>100</h1>
+            </div>
+            <div class="card">
+                nilai <br> <h1>100</h1>
+            </div>
+            <div class="card">
+                nilai <br> <h1>100</h1>
+            </div>
+        </div>
+        <div class="galeri">
+            <div class="textHeadKedua">kumpulan gambar</div>
+            <div class="contentKedua">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="footer">
+    SMK BINHAR
+</section>
+
+<script>
+    window.addEventListener("scroll", function(){
+    const header = document.querySelector(".head");
+    header.classList.toggle('on', window.scrollY > 0);
+  });
+</script>
+</body>
+</html>
