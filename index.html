@@ -1,0 +1,314 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>SMK Bintang Harapan</title>
+</head>
+<body>
+<section class="head">
+    <div class="satu">
+        <a href="https://www.instagram.com/smkbintangharapan_/"><img src="media/LogoSMKBInhar.png" alt=""></a>
+        <h1>SMK BINTANG HARAPAN</h1>
+    </div>
+    <div class="dua">
+        <ul>
+            <li class="navbar" onclick="navbarDiKlik()" id="menuNavBar"><img src="media/menuNavBar.svg" alt=""></li>
+            <li><a href="#beranda">beranda</a></li>
+            <li><a href="#tentangKami">Tentang Kami</a></li>
+            <li><a href="#acara">EsktraKurikuler</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="navbar-container" id="navbarContainerMuncul">
+    <ul>
+        <li><a href="#beranda">beranda</a></li>
+        <li><a href="#tentangKami">Tentang Kami</a></li>
+            <li><a href="#acara">acara</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <div class="container1" onclick="navbarDiKlik()"><img class="navbar" id="silang" src="media/silang.svg"></div>
+</section>
+
+<script>
+    let navbarContainerMuncul = document.getElementById("navbarContainerMuncul");
+    let silang = document.getElementById("silang");
+    let menuNavBar = document.getElementById("menuNavBar");
+    let i = 0;
+    function navbarDiKlik() {
+        console.log ("di klik");
+        i++;
+        if (i == 1) {
+            navbarContainerMuncul.style.display = "flex";
+            menuNavBar.style.display = "none";
+        } if (i == 2) {
+            navbarContainerMuncul.style.display = "none";
+            menuNavBar.style.display = "block";
+            i = 0;
+        }
+    }
+    let timerId = setInterval(() => screenTime(), 500);
+    function screenTime() {
+        let screenChange = screen.width;
+        if (menuNavBar.style.display == "none") {} else {
+            if (screenChange > 1320) {
+            menuNavBar.style.display = "none";
+            navbarContainerMuncul.style.display = "none";
+            console.log ("di klik");
+        }
+        }
+        if (menuNavBar.style.display == "block") {} else {
+            if (screenChange < 1320) {
+            menuNavBar.style.display = "block";
+            console.log ("di klik");
+        }
+        }
+    }
+
+</script>
+
+<section class="halaman" id="beranda">
+    <div class="isi-halaman" >
+        <div class="selamat-datang">
+            <div class="gambar">
+                <div class="textbox">selamat datang di smk bintang harapan</div>
+                <img src="media/sekolahBinhar.jpg" alt="">
+            </div>
+            <div class="boxContent">
+                <a class="card" href="tkj.html">
+                    <img src="media/tkj.jpg">
+                    <div class="satu"><h3>Teknik Komputer Jaringan</h3></div>
+                </a>
+                <a class="card" href="otkp.html">
+                    <img src="media/otkp.jpg">
+                    <div class="satu"><h3>Otomatisasi dan Tata Kelola Perkantoran</h3></div>
+                </a>
+                <a class="card" href="farmasi.html">
+                    <img src="media/farmasi.jpg">
+                    <div class="satu"><h3>Farmasi</h3></div>
+                </a>
+                <a class="card" href="perawat.html">
+                    <img src="media/perawat.jpg">
+                    <div class="satu"><h3>Perawat</h3></div>
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="tentangKami" class="isi-halaman" style="padding-block: 40px;"></div>
+    <div class="isi-halaman3" >
+        <div class="tentang-kami-front">
+            <div class="split">
+                <div class="container">
+                    <h1>SEKOLAH APA INI?</h1>
+                    <p> <b>SMK BINTANG HARAPAN</b>, adalah Sekolah Menengah Kejuruan Swasta dengan ciri khas gedung berwarna ungu yang berakreditasi A dengan tujuan meningkatkan ilmu ilmu pengetahuan yang akan datang di masa depan.</p>
+
+                    <p>secara keseluruhan memiliki luas wilayah yang cukup besar, sebanyak 3 gedung yang dikelilingi dengan lapangan dibagian tengahnya yang terdiri dari banyak ruang kelas. dan memiliki 4 jurusan yaitu Farmasi, Perawat, Otomatisasi dan Tata Kelola Perkantoran dan Teknik Komputer Dan Jaringan yang masing masing memiliki 2 ruang laboratorium (LAB).</p>
+
+                    <p>Memiliki Fasilitas yang cukup dan banyak, diantaranya setiap ruangan memiliki Air Conditioner, Toilet yang banyak, tempat Perkumpulan yang cukup besar, Masjid dan Musholla, Area Parkir yang luas yang bisa menampung kendaraan yang cukup banyak.</p>
+
+                    <p>saat memasuki lingkungan sekolah disambut oleh adanya patung kuda, pada bagian samping gerbang dibagian depan terdapat pos keamanan.</p>
+                </div>
+            </div>
+            <div class="split responsive">
+                
+                <div class="h1-tentang">
+                    <img src="media/sekolahBinhar2.jpg" alt="">
+                    <h1>SEKOLAH APA INI?</h1>
+                </div>
+            </div>
+        </div>
+        <div class="Tentang-kami">
+            <div class="split responsive-h1-tentang">
+                <h1 class="h1-tentang">VISI MISI</h1>
+            </div>
+            <div class="split">
+                <div class="container">
+                    <h3>VISI</h3>
+                    <div class="textarea1">
+                        mencetak kelulusan yang bermutu dan komperatif
+                    </div>
+    
+                    <h3>MISI</h3>
+                    <div class="textarea1">
+                        menyediakan pendidikan yang berkualitas
+                    </div>
+                    <div class="textarea1">
+                        menyediakan lingkungan pendidikan yang kondusif
+                    </div>
+                    <div class="textarea1">
+                        menyediakan sarana dan prasarana yang sesuai kebutuhan
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="Tentang-kami">
+            <div class="split">
+                <div class="container">
+                    <h3>Tujuan</h3>
+                    <div class="textarea1">
+                        Mempersiapkan memproses dan mencetak lulusan yang bermutu dan siap pakai
+                    </div>
+                    <div class="textarea1">
+                        meningkatkan mutu pendidikan di kabupaten bekasi
+                    </div>
+                    <div class="textarea1">
+                        Memberikan Peluang Masa Depan Lebih Baik
+                    </div>
+    
+
+                </div>
+            </div>
+            <div class="split responsive-h1-tentang">
+                <h1 class="h1-tentang">Tujuan Sekolah</h1>
+            </div>
+        </div>
+    </div>
+    <div id="acara" style="padding: 50px;"></div>
+    <div class="isi-halaman2">
+        <div class="textbox2">
+            <div class="text">BERBAGAI EKSRA KULIKUREL</div>
+        </div>
+        <div class="acara">
+            <div class="card">
+                <img src="media/Musik.jpg" alt="">
+                <div class="textbox-card-acara">Musik</div>
+            </div>
+            <div class="card">
+                <img src="media/Paskib.jpg" alt="">
+                <div class="textbox-card-acara">Paskibra</div>
+            </div>
+            <div class="card">
+                <img src="media/pmr.jpg" alt="">
+                <div class="textbox-card-acara">PMR</div>
+            </div>
+            <div class="card">
+                <img src="media/Futsal1.jpg" alt="">
+                <div class="textbox-card-acara">Futsal</div>
+            </div>
+            <div class="card">
+                <img src="media/acara1.jpg" alt="">
+                <div class="textbox-card-acara">pramuka</div>
+            </div>
+            <div class="card">
+                <img src="media/acara2.jpg" alt="">
+                <div class="textbox-card-acara">marching band</div>
+            </div>
+            <div class="card">
+                <img src="media/acara3.jpg" alt="">
+                <div class="textbox-card-acara">basketball</div>
+            </div>
+            <div class="card">
+                <img src="media/acara4.jpg" alt="">
+                <div class="textbox-card-acara">rohis</div>
+            </div>
+            <div class="card">
+                <img src="media/acara5.jpg" alt="">
+                <div class="textbox-card-acara">mpk-osis</div>
+            </div>  
+        </div>
+    </div>
+    <div id="galeri" style="padding: 50px;"></div>
+    <div class="isi-halaman" >
+        <div class="textGaleri">Galeri Sekolah</div>
+        <div class="galeri">
+            <div class="cardGaleri">
+                <img src="media/galeri1.jpg" alt="">
+                <div class="textCardGaleri">a</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri2.jpg" alt="">
+                <div class="textCardGaleri">b</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri3sub1.jpg" alt="">
+                <div class="textCardGaleri">c</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri3sub2.jpg" alt="">
+                <div class="textCardGaleri">d</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri4.jpg" alt="">
+                <div class="textCardGaleri">e</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri5.jpg" alt="">
+                <div class="textCardGaleri">f</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri6.jpg" alt="">
+                <div class="textCardGaleri">g</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri7sub1.jpg" alt="">
+                <div class="textCardGaleri">h</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/galeri7sub2.jpg" alt="">
+                <div class="textCardGaleri">i</div>
+            </div>
+            <div class="cardGaleri">
+                <img src="media/Futsal.jpg" alt="">
+                <div class="textCardGaleri">j</div>
+            </div>
+        </div>
+    </div>
+    <div id="kontak" style="padding: 50px;"></div>
+    <div class="isi-halaman">
+        <div class="text-head-kontak">Hubungi Kami</div>
+        <div class="Kontak">
+            <div class="split">
+                <div class="containerKontakForm">
+                    <form action="">
+                        <input type="text" placeholder="Nama">
+                        <input type="email" placeholder="Email">    
+                        <input type="phone" placeholder="Nomor Telepon" autocomplete="off">
+                        <textarea rows="12" placeholder="Pesan"></textarea>
+                        <button>Kirim</button>
+                    </form>
+                </div>
+            </div>
+            <div class="split">
+                <div class="containerkontakklik">
+                    <a class="klik-icon none">
+                        <h1>platform media</h1>
+                    </a>
+                    <a href="" class="klik-icon">
+                        <img src="media/youtubeLogo.png" alt="">
+                        <p>Instagram</p>
+                    </a>
+                    <a href="" class="klik-icon">
+                        <img src="media/FacebookLogo.png" alt="">
+                        <p>Facebook</p>
+                    </a>
+                    <a href="" class="klik-icon">
+                        <img src="media/instagram.png" alt="">
+                        <p>Youtube</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    SMK BINHAR
+</section>
+
+  <script>
+    window.addEventListener("scroll", function(){
+    const header = document.querySelector(".head");
+    header.classList.toggle('on', window.scrollY > 0);
+  });
+</script>
+</body>
+</html>
